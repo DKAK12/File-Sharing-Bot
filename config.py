@@ -40,15 +40,13 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", 'Hi {first}✨,\n\nIam a File Store Bot\nPowered By @Anime_Mania8\nThank You')
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "○ Created : @Dk_broke
-○ Channel : @Anime_Mania8
-○ Support Group : @MixologyXBotSupport").split()):
+    for x in (os.environ.get("ADMINS", '○ Created : @Dk_broke\n○ Channel : @Anime_Mania8/n○ Support Group : @MixologyXBotSupport').split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", 'Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>')
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
